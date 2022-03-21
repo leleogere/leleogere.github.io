@@ -71,13 +71,13 @@ p, li {
   text-align: justify;
 }
 
-.date {
-  font-weight: bold;
-  border: 2px solid black;
-  border-radius: 5%;
-  padding-right: .2em;
-  padding-left: .2em;
-  background-color: #cccccc;
+a:link, a:visited {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
 }
 
 /*------------*\
@@ -274,3 +274,20 @@ progress::-moz-progress-bar {
   border: 1px solid black;
 }
 
+/*-----------*\
+|   CONTACT   |
+\*-----------*/
+.contacts {
+  margin: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item img {
+  width: 20px;
+  height: 20px;
+  margin-right: .5em;
+}

@@ -52,6 +52,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);
+  margin-top: 2em;
 }
 
 footer {
@@ -180,6 +181,11 @@ p, li {
 /*--------------*\
 |    LANGUAGE    |
 \*--------------*/
+.languages {
+  max-width: 800px;
+  margin: auto;
+}
+
 .columns {
   margin-top: 2em;
   display: flex;
@@ -221,6 +227,11 @@ p, li {
 /*-----------*\
 |    TOOLS    |
 \*-----------*/
+.tools {
+  max-width: 800px;
+  margin: auto;
+}
+
 .tool-item {
   min-width: 200px;
   max-width: 500px;
@@ -263,20 +274,3 @@ progress::-moz-progress-bar {
   border: 1px solid black;
 }
 
-/*-----------------------------*\
-|   LANGUAGE AND TOOLS LAYOUT   |
-\*-----------------------------*/
-.skills {
-  margin-top: 2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  column-gap: 80px;
-}
-
-.skills-category {
-  min-width: 200px;
-  max-width: 500px;
-  flex: 1 0 40%;
-}

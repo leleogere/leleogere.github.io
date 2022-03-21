@@ -8,7 +8,8 @@
 
 /* Define main colors */
 :root {
-  --main-color: darkred;
+  --main-color: #468751;
+  --secondary-color: #A53F2B;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 .bloc-page {
-  max-width: 900px;
+  max-width: 1200px;
   min-width: 200px;
   margin: auto;
 }
@@ -48,16 +49,15 @@ header h1 {
 
 h1 {
   font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: .1em;
   text-align: center;
-  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  color: var(--main-color);
 }
 
 footer {
 }
 
-img {
+.photo {
   border: 2px black solid;
   box-shadow: 3px 3px 3px black;
   border-radius: 1%;
@@ -79,13 +79,6 @@ p, li {
   background-color: #cccccc;
 }
 
-
-h3 {
-  font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: .5em;
-}
-
 /*------------*\
 |    RESUME    |
 \*------------*/
@@ -93,17 +86,29 @@ h3 {
   margin: 1em;
 }
 
+.resume {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  column-gap: 30px
+}
+
+.resume-part {
+  min-width: 400px;
+  max-width: 800px;
+  flex: 2 1 40%;
+}
+
 /* Global left border */
 .resume-item {
   padding: 0 0 10px 30px;
   border-left: 2px solid var(--main-color);
-  height: 10%;
   position: relative;
   margin: 0 1em 0 1em;
 }
 
 /* Experience title */
-.resume-item h3 {
+.resume-item h2 {
   color: var(--main-color);
   font-size: 1.4em;
   display: inline-block;
@@ -111,7 +116,7 @@ h3 {
 }
 
 /* Experience date */
-.resume-item h4 {
+.resume-item h3 {
   font-weight: normal;
   font-style: italic;
   font-size: 1.2em;
@@ -120,7 +125,7 @@ h3 {
 }
 
 /* Experience place */
-.resume-item h5 {
+.resume-item h4 {
   font-weight: normal;
   font-style: italic;
   font-size: 1.1em;
@@ -172,55 +177,106 @@ h3 {
 }
 
 
-/*------------*\
-|    SKILLS    |
-\*------------*/
-.skills .skills-category .all-skills {
+/*--------------*\
+|    LANGUAGE    |
+\*--------------*/
+.columns {
+  margin-top: 2em;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  column-gap: 30px
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  column-gap: 30px;
+  align-items: baseline;
 }
 
-.skills-item {
+.language-item {
+  min-width: 110px
+}
+
+.language-item h2, .language-item p {
+  text-align: center;
+}
+
+.language-item h2 {
+  color: var(--main-color);
+  margin-bottom: -.5em;
+}
+
+.language-item p {
+  color: var(--secondary-color);
+}
+
+.language-item img {
+  object-fit: cover;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/*-----------*\
+|    TOOLS    |
+\*-----------*/
+.tool-item {
   min-width: 200px;
+  max-width: 500px;
   flex: 1 0 40%;
 }
 
-.skills-item h3 {
+.tool-item h2 {
   font-size: 1.1em;
   display: inline-block;
+  margin-bottom: .1em;
+  color: var(--main-color);
 }
 
-.skills-item .level {
+.tool-item .level {
   font-size: 1.1em;
   float: right;
-}
-
-.skills .skills-category .skills-item progress {
-  display: block;
-  background: var(--main-color);
-  border-radius: 14px;
+  color: var(--secondary-color);
 }
 
 progress {
   width: 100%;
-  max-width: 1000px;
   height: 12px;
   display: block; /* default: inline-block */
-  padding: 3px;
-  border: 0 none;
+  padding: 2px;
+  border: 1px solid black;
   border-radius: 14px;
+  background: white;
 }
 progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  border-radius: 4px;
-  background: orange;
+  border-radius: 20px;
+  background: var(--main-color);
+  border: 1px solid black;
 }
 progress::-moz-progress-bar {
-  border-radius: 12px;
-  background: orange;
+  border-radius: 20px;
+  background: var(--main-color);
+  border: 1px solid black;
+}
+
+/*-----------------------------*\
+|   LANGUAGE AND TOOLS LAYOUT   |
+\*-----------------------------*/
+.skills {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 80px;
+}
+
+.skills-category {
+  min-width: 200px;
+  max-width: 500px;
+  flex: 1 0 40%;
 }

@@ -14,8 +14,9 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   color: #333;
+  margin: auto 2em;
   /* change background opactiy */
   /*background: rgba(255, 255, 255, 0.2) url("/images/hip-square.png");*/
   background: #eeeeee;
@@ -43,12 +44,12 @@ header:after {
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 4em;
   margin: 0;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);
@@ -92,7 +93,7 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  column-gap: 30px
+  column-gap: 30px;
 }
 
 .resume-part {
@@ -112,7 +113,7 @@ a:hover {
 /* Experience title */
 .resume-item h2 {
   color: var(--main-color);
-  font-size: 1.4em;
+  font-size: 2em;
   display: inline-block;
   margin: 0;
 }
@@ -121,7 +122,7 @@ a:hover {
 .resume-item h3 {
   font-weight: normal;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.7em;
   color: var(--main-color);
   margin: 0;
 }
@@ -130,7 +131,7 @@ a:hover {
 .resume-item h4 {
   font-weight: normal;
   font-style: italic;
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -159,7 +160,7 @@ a:hover {
   content: "";
   position: absolute;
   width: 6px;
-  height: 1.7em;
+  height: 2.3em;
   border-radius: 5px;
   left: -6px;
   top: 0;

@@ -15,6 +15,10 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   color: #333;
   margin: auto 2em;
   /* change background opactiy */

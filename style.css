@@ -56,6 +56,7 @@ h1 {
 }
 
 footer {
+  margin-bottom: 2em;
 }
 
 .photo {
@@ -191,7 +192,7 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  column-gap: 30px;
+  column-gap: 15px;
   align-items: baseline;
 }
 
@@ -235,6 +236,7 @@ a:hover {
 .tool-item {
   min-width: 200px;
   max-width: 500px;
+  margin: auto .5em;
   flex: 1 0 40%;
 }
 
@@ -277,16 +279,21 @@ progress::-moz-progress-bar {
 /*-----------*\
 |   CONTACT   |
 \*-----------*/
+/* horizontally center the div 'contacts' */
 .contacts {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: .6em;
 }
 
-.contact-item {
+.contact-item a {
   display: flex;
   align-items: center;
 }
 
-.contact-item img {
+.contact-item a img {
   width: 20px;
   height: 20px;
   margin-right: .5em;

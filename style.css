@@ -209,7 +209,6 @@ a:hover {
 |    LANGUAGE    |
 \*--------------*/
 .languages {
-  max-width: 800px;
   margin: auto;
 }
 
@@ -217,8 +216,8 @@ a:hover {
   margin-top: 2em;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  column-gap: 15px;
+  justify-content: center;
+  column-gap: 4em;
   align-items: baseline;
 }
 
@@ -258,52 +257,88 @@ a:hover {
 |    TOOLS    |
 \*-----------*/
 .tools {
-  max-width: 800px;
   margin: auto;
 }
 
 .tool-item {
-  min-width: 200px;
-  max-width: 500px;
-  margin: auto .5em;
-  flex: 1 0 40%;
+  max-width: 200px;
+  margin: 0 1em;
 }
 
-.tool-item h2 {
-  font-size: 1.3em;
-  display: inline-block;
-  margin-bottom: .1em;
+.tools h2 {
+  font-size: 1.6em;
   color: var(--main-color);
+  text-align: center;
+  /*margin-bottom: 0;*/
 }
 
-.tool-item .level {
-  font-size: 1.1em;
-  float: right;
-  color: var(--secondary-color);
+.tools-list p {
+  text-align: center;
+  margin: 0;
 }
 
-progress {
-  width: 100%;
-  height: 12px;
-  display: block; /* default: inline-block */
-  /*padding: 1px;*/
-  border: 1px solid black;
-  border-radius: 2px;
-  background: white;
+.logo-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  row-gap: 1em;
 }
-progress::-webkit-progress-bar {
-  background: transparent;
+
+.logo-list img {
+  display: block;
+  height: 3em;
+  text-align: center;
+  margin: 0 auto;
 }
-progress::-webkit-progress-value {
-  border-radius: 2px;
-  background: var(--tertiary-color);
-  border-right: 1px solid black;
-}
-progress::-moz-progress-bar {
-  border-radius: 2px;
-  background: var(--tertiary-color);
-  border-right: 1px solid black;
-}
+
+/*.tools {*/
+/*  max-width: 800px;*/
+/*  margin: auto;*/
+/*}*/
+
+/*.tool-item {*/
+/*  min-width: 200px;*/
+/*  max-width: 500px;*/
+/*  margin: auto .5em;*/
+/*  flex: 1 0 40%;*/
+/*}*/
+
+/*.tool-item h2 {*/
+/*  font-size: 1.3em;*/
+/*  display: inline-block;*/
+/*  margin-bottom: .1em;*/
+/*  color: var(--main-color);*/
+/*}*/
+
+/*.tool-item .level {*/
+/*  font-size: 1.1em;*/
+/*  float: right;*/
+/*  color: var(--secondary-color);*/
+/*}*/
+
+/*progress {*/
+/*  width: 100%;*/
+/*  height: 12px;*/
+/*  display: block; !* default: inline-block *!*/
+/*  !*padding: 1px;*!*/
+/*  border: 1px solid black;*/
+/*  border-radius: 2px;*/
+/*  background: white;*/
+/*}*/
+/*progress::-webkit-progress-bar {*/
+/*  background: transparent;*/
+/*}*/
+/*progress::-webkit-progress-value {*/
+/*  border-radius: 2px;*/
+/*  background: var(--tertiary-color);*/
+/*  border-right: 1px solid black;*/
+/*}*/
+/*progress::-moz-progress-bar {*/
+/*  border-radius: 2px;*/
+/*  background: var(--tertiary-color);*/
+/*  border-right: 1px solid black;*/
+/*}*/
 
 /*-----------*\
 |   CONTACT   |
@@ -315,6 +350,10 @@ progress::-moz-progress-bar {
   align-items: center;
   justify-content: center;
   row-gap: .6em;
+}
+
+.phone-number {
+  height: 3em;
 }
 
 .contact-item a {

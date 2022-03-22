@@ -12,6 +12,8 @@
   --secondary-color: #993939;
   --tertiary-color: #f4a259;
   --quaternary-color: #f4e285;
+  --background-color: #eeeeee;
+  --tile-color: #f4e285;
 }
 
 body {
@@ -25,14 +27,21 @@ body {
   margin: auto 2em;
   /* change background opactiy */
   /*background: rgba(255, 255, 255, 0.2) url("/images/hip-square.png");*/
-  background: #eeeeee;
-  background-blend-mode: overlay;
+  background: var(--background-color);
 }
 
 .disclaimer {
+  color: var(--secondary-color);
   text-align: center;
   border-bottom: 2px solid black;
-  padding: 0.5em 0;
+  padding: 1em 0;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #ffd9d9;
+  width: 100%;
+  z-index: 1000;
 }
 
 #top {
@@ -40,17 +49,29 @@ body {
   text-transform: none;
 }
 
-.bloc-page {
-  max-width: 1600px;
+body {
+  max-width: 1200px;
   min-width: 300px;
   margin: auto;
+  padding: 3em 1em 5em;
+}
+
+.tile {
+  background: #eeeeee;
+  padding: 1em;
+  box-shadow: 0 0 10px #aaa;
+  margin: 1em 0;
+  border-radius: 2px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.tile:hover {
+  box-shadow: 0 0 20px #aaa;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 header, nav {
   text-align: center;
-  border-bottom: 2px solid gray;
-  max-width: 1000px;
-  margin: auto;
 }
 
 header:after {
@@ -59,14 +80,25 @@ header:after {
 
 header h1 {
   font-size: 3em;
-  margin: 0;
 }
 
-nav ul {
-  margin: 1em auto;
-  width: 70%;
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  column-gap: 0;
+  align-items: center;
+}
+
+nav a {
+  padding: .5em .7em;
   text-align: center;
-  list-style: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  background: #ddd;
+  border-radius: 5px;
 }
 
 h1 {
@@ -74,11 +106,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);
-  margin-top: 2em;
-}
-
-footer {
-  margin-bottom: 10em;
+  margin-top: 0;
 }
 
 .photo {
@@ -108,29 +136,45 @@ a:hover {
 |    RESUME    |
 \*------------*/
 .resume {
-  margin: 0 auto;
-  max-width: 1000px;
-}
-
-.resume {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  column-gap: 3em;
+  column-gap: 1em;
 }
 
-.resume-part {
-  min-width: 450px;
-  max-width: 1000px;
-  flex: 1 1 45%;
+.resume .tile {
+  flex: 1 1 40%;
 }
 
 /* Global left border */
+/* Line */
 .resume-item {
   padding: 0 0 10px 20px;
   border-left: 2px solid var(--main-color);
   position: relative;
-  margin: 0;
+  margin-left: 10px;
+}
+/* Bullets */
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 1.8em;
+  border-radius: 5px;
+  left: -6px;
+  top: 0;
+  background: #fff;
+  border: 2px solid var(--main-color);
+}
+/* Final bullet */
+.resume .resume-item:last-child::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: -4px;
+  bottom: 0;
+  background: var(--main-color);
 }
 
 /* Experience title */
@@ -163,7 +207,7 @@ a:hover {
 /* Experience description */
 .resume-item-description {
   margin-top: .5em;
-  border-left: 2px dotted var(--main-color);
+  border-left: 2px dotted var(--secondary-color);
   padding-left: .5em;
 }
 
@@ -176,44 +220,13 @@ a:hover {
   margin-top: -.8em;
 }
 
-.resume-item:last-child {
-  margin-bottom: 0;
-  padding-bottom: 1em;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 2.3em;
-  border-radius: 5px;
-  left: -6px;
-  top: 0;
-  background: #fff;
-  border: 2px solid var(--main-color);
-}
-
-.resume .resume-item:last-child::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  left: -4px;
-  bottom: 0;
-  background: var(--main-color);
-  border: 2px solid var(--main-color);
-}
-
 
 /*--------------*\
 |    LANGUAGE    |
 \*--------------*/
-.languages {
-  margin: auto;
-}
 
 .columns {
-  margin-top: 2em;
+  /*margin-top: 2em;*/
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -256,13 +269,9 @@ a:hover {
 /*-----------*\
 |    TOOLS    |
 \*-----------*/
-.tools {
-  margin: auto;
-}
-
 .tool-item {
   max-width: 200px;
-  margin: 0 1em;
+  margin: -2em 1em 1em;
 }
 
 .tools h2 {
@@ -350,10 +359,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   row-gap: .6em;
-}
-
-.phone-number {
-  height: 3em;
 }
 
 .contact-item a {

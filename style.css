@@ -27,6 +27,12 @@ body {
   background-blend-mode: overlay;
 }
 
+.disclaimer {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 0.5em 0;
+}
+
 #top {
   border: 0;
   text-transform: none;

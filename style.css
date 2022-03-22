@@ -8,8 +8,10 @@
 
 /* Define main colors */
 :root {
-  --main-color: #468751;
-  --secondary-color: #A53F2B;
+  --main-color: #62bc14;
+  --secondary-color: #993939;
+  --tertiary-color: #f4a259;
+  --quaternary-color: #f4e285;
 }
 
 body {
@@ -56,12 +58,19 @@ header:after {
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
 }
 
+nav ul {
+  margin: 1em auto;
+  width: 70%;
+  text-align: center;
+  list-style: none;
+}
+
 h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);
@@ -127,7 +136,7 @@ a:hover {
 /* Experience title */
 .resume-item h2 {
   color: var(--main-color);
-  font-size: 2em;
+  font-size: 1.5em;
   display: inline-block;
   margin: 0;
 }
@@ -135,17 +144,19 @@ a:hover {
 /* Experience date */
 .resume-item h3 {
   font-weight: normal;
-  font-style: italic;
-  font-size: 1.4em;
+  /*font-style: italic;*/
+  font-size: 1.3em;
   color: var(--main-color);
   margin: 0;
 }
 
 /* Experience place */
 .resume-item h4 {
-  font-weight: normal;
+  font-weight: bold;
+  color: var(--secondary-color);
   font-style: italic;
-  font-size: 1.3em;
+  text-transform: uppercase;
+  font-size: 1.1em;
   margin: 0;
 }
 
@@ -221,13 +232,13 @@ a:hover {
 
 /* Language name */
 .language-item h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: var(--main-color);
   margin-bottom: -.5em;
 }
 
 .language-item p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: var(--secondary-color);
 }
 
@@ -259,7 +270,7 @@ a:hover {
 }
 
 .tool-item h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   display: inline-block;
   margin-bottom: .1em;
   color: var(--main-color);
@@ -275,23 +286,23 @@ progress {
   width: 100%;
   height: 12px;
   display: block; /* default: inline-block */
-  padding: 2px;
+  /*padding: 1px;*/
   border: 1px solid black;
-  border-radius: 14px;
+  border-radius: 2px;
   background: white;
 }
 progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  border-radius: 20px;
-  background: var(--secondary-color);
-  border: 1px solid black;
+  border-radius: 2px;
+  background: var(--tertiary-color);
+  border-right: 1px solid black;
 }
 progress::-moz-progress-bar {
-  border-radius: 20px;
-  background: var(--secondary-color);
-  border: 1px solid black;
+  border-radius: 2px;
+  background: var(--tertiary-color);
+  border-right: 1px solid black;
 }
 
 /*-----------*\
@@ -309,7 +320,7 @@ progress::-moz-progress-bar {
 .contact-item a {
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .contact-item a img {

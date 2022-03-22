@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -33,14 +33,16 @@ body {
 }
 
 .bloc-page {
-  max-width: 1200px;
-  min-width: 200px;
+  max-width: 1600px;
+  min-width: 300px;
   margin: auto;
 }
 
-header {
+header, nav {
   text-align: center;
   border-bottom: 2px solid gray;
+  max-width: 1000px;
+  margin: auto;
 }
 
 header:after {
@@ -53,7 +55,7 @@ header h1 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   text-align: center;
   text-transform: uppercase;
   color: var(--main-color);
@@ -61,7 +63,7 @@ h1 {
 }
 
 footer {
-  margin-bottom: 2em;
+  margin-bottom: 10em;
 }
 
 .photo {
@@ -71,6 +73,7 @@ footer {
   float: left;
   margin-right: 1em;
   margin-bottom: .4em;
+  width: 10em;
 }
 
 p, li {
@@ -90,28 +93,29 @@ a:hover {
 |    RESUME    |
 \*------------*/
 .resume {
-  margin: 1em;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .resume {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  column-gap: 30px;
+  column-gap: 3em;
 }
 
 .resume-part {
-  min-width: 400px;
-  max-width: 800px;
-  flex: 2 1 40%;
+  min-width: 450px;
+  max-width: 1000px;
+  flex: 1 1 45%;
 }
 
 /* Global left border */
 .resume-item {
-  padding: 0 0 10px 30px;
+  padding: 0 0 10px 20px;
   border-left: 2px solid var(--main-color);
   position: relative;
-  margin: 0 1em 0 1em;
+  margin: 0;
 }
 
 /* Experience title */
@@ -126,7 +130,7 @@ a:hover {
 .resume-item h3 {
   font-weight: normal;
   font-style: italic;
-  font-size: 1.7em;
+  font-size: 1.4em;
   color: var(--main-color);
   margin: 0;
 }
@@ -135,7 +139,7 @@ a:hover {
 .resume-item h4 {
   font-weight: normal;
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0;
 }
 
@@ -209,20 +213,23 @@ a:hover {
   text-align: center;
 }
 
+/* Language name */
 .language-item h2 {
+  font-size: 1.8em;
   color: var(--main-color);
   margin-bottom: -.5em;
 }
 
 .language-item p {
+  font-size: 1.3em;
   color: var(--secondary-color);
 }
 
 .language-item img {
   object-fit: cover;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border: 2px solid black;
   border-radius: 100%;
   text-align: center;
@@ -246,7 +253,7 @@ a:hover {
 }
 
 .tool-item h2 {
-  font-size: 1.1em;
+  font-size: 1.5em;
   display: inline-block;
   margin-bottom: .1em;
   color: var(--main-color);
@@ -272,12 +279,12 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
   border-radius: 20px;
-  background: var(--main-color);
+  background: var(--secondary-color);
   border: 1px solid black;
 }
 progress::-moz-progress-bar {
   border-radius: 20px;
-  background: var(--main-color);
+  background: var(--secondary-color);
   border: 1px solid black;
 }
 
@@ -296,6 +303,7 @@ progress::-moz-progress-bar {
 .contact-item a {
   display: flex;
   align-items: center;
+  font-size: 1.5em;
 }
 
 .contact-item a img {

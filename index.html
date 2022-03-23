@@ -34,7 +34,7 @@
 
     </header>
 
-    <div class="tile">
+    <div class="tile navbar">
         <nav>
             <a href="#formation">Formation</a>
             <a href="#experience">Expériences pro</a>
@@ -43,9 +43,59 @@
             <a href="#contact">Contact</a>
         </nav>
     </div>
+    <script>
+        // react when the user clicks on a button of the navbar
+        document.querySelectorAll('.navbar a').forEach(function(element) {
+            element.addEventListener('click', function(event) {
+                // prevent the default action of the event
+                event.preventDefault();
+                // get the id of the element that was clicked
+                var id = event.target.getAttribute('href').substr(1);
+                // get the element with the corresponding id
+                var element = document.getElementById(id);
+                // scroll smoothly to the element minus the navbar height
+                window.scroll({
+                    top: element.offsetTop - document.querySelector('.navbar').offsetHeight - 30,
+                    behavior: 'smooth'
+                });
+                // find the first parent element that has the class tile
+                var parent = element.parentElement;
+                while (!parent.classList.contains('tile')) {
+                    parent = parent.parentElement;
+                }
+                // increase box-shadow of the parent element
+                parent.style.boxShadow = '0 0 8px #000';
+                // remove the border after a short delay
+                setTimeout(function() {
+                    parent.style.boxShadow = '';
+                }, 800);
+            });
+        });
+        // color the navbar according to the current position of the page
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            var navbarHeight = navbar.offsetHeight;
+            var sections = document.querySelectorAll('section');
+            var currentSection = null;
+            sections.forEach(function(element) {
+                if (element.offsetTop - navbarHeight <= window.scrollY) {
+                    currentSection = element;
+                }
+            });
+            if (currentSection) {
+                navbar.querySelectorAll('a').forEach(function(element) {
+                    element.classList.remove('active');
+                    if (element.getAttribute('href').substr(1) === currentSection.id) {
+                        element.classList.add('active');
+                    }
+                });
+            }
+        });
+
+    </script>
 
     <!-- Resume -->
-    <section id="resume" class="resume">
+    <div id="resume" class="resume">
 
         <div class="tile">
 
@@ -135,12 +185,10 @@
             </div>
         </div>
 
-    </section>
-
-    <section id="languages" class="languages">
+    </div>
 
         <div class="tile">
-            <h1>Langues</h1>
+            <h1 id="languages">Langues</h1>
 
             <div class="columns">
 
@@ -165,13 +213,8 @@
             </div>
         </div>
 
-    </section>
-
-
-    <section id="tools" class="tools">
-
         <div class="tile">
-            <h1>Outils</h1>
+            <h1 id="tools">Outils</h1>
 
             <div class="columns">
 
@@ -223,8 +266,6 @@
 
             </div>
         </div>
-        
-    </section>
 
     <footer>
         <div class="tile">

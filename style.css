@@ -6,12 +6,14 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 /*---------------*\
 |    LANGUAGES    |
 \*---------------*/
 [lang="en"] {
   display: none;
 }
+
 
 /*---------------*\
 |     COLORS      |
@@ -25,25 +27,25 @@
   --tile-color: #f4e285;
 }
 
-/* disclaimer */
+
 /*----------------*\
 |    DISCLAIMER    |
 \*----------------*/
 .disclaimer {
   color: var(--secondary-color);
   text-align: center;
-  border-bottom: 2px solid black;
+  border-top: 2px solid var(--main-color);
   padding: .5em 0;
   margin: 0;
   position: fixed;
   left: 0;
-  top: 0;
+  bottom: 0;
   background: #ffd9d9;
   width: 100%;
   z-index: 1000;
 }
 
-/* body */
+
 /*--------------*\
 |      BODY      |
 \*--------------*/
@@ -64,29 +66,33 @@ body {
   padding: 3em 1em 5em;
 }
 
+
+/*----------------*\
+|       TILE       |
+\*----------------*/
 .tile {
   background: #eeeeee;
   padding: 1em;
-  box-shadow: 0 0 4px #aaa;
+  box-shadow: 0 0 3px #aaa;
   margin: 1em 0;
   border-radius: 2px;
   transition: box-shadow 0.1s ease-in-out;
 }
 
 .tile:hover {
-  box-shadow: 0 0 7px #aaa;
+  box-shadow: 0 0 4px #aaa;
   transition: box-shadow 0.1s ease-in-out;
 }
 
-header, nav {
-  text-align: center;
-}
 
+/*----------------*\
+|      HEADER      |
+\*----------------*/
 header {
+  text-align: center;
   display: flex;
   column-gap: 1em;
 }
-
 
 header .tile {
   margin: 0;
@@ -117,33 +123,6 @@ header .tile:first-child p:last-child {
   font-size: 0.8em;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  column-gap: 0;
-  align-items: center;
-}
-
-nav a {
-  padding: .5em .7em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-nav a:hover {
-  background: #ddd;
-  border-radius: 5px;
-}
-
-h1 {
-  font-size: 1.8em;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--main-color);
-  margin-top: 0;
-}
-
 header h1 {
   font-size: 2.5em;
   text-transform: none;
@@ -157,6 +136,53 @@ header h2 {
   margin-top: 0;
 }
 
+
+/*----------------*\
+|      NAVBAR      |
+\*----------------*/
+.tile.navbar {
+  padding: 0;
+  background: #e2e5d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  column-gap: 0;
+  align-items: center;
+}
+
+nav a {
+  padding: 1em .7em;
+  flex-grow: 5;
+  margin: 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  background: #ddd;
+  transition: background 0.1s ease-in-out;
+}
+
+/*----------------*\
+|      GLOBAL      |
+\*----------------*/
+h1 {
+  font-size: 1.8em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-top: 0;
+}
+
 p, li {
   text-align: justify;
 }
@@ -164,10 +190,12 @@ p, li {
 a:link, a:visited {
   color: var(--main-color);
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--secondary-color);
+  transition: color 0.2s ease-in-out;
 }
 
 /*------------*\

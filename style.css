@@ -60,7 +60,7 @@ body {
   /* change background opactiy */
   /*background: rgba(255, 255, 255, 0.2) url("/images/hip-square.png");*/
   background: var(--background-color);
-  max-width: 1200px;
+  max-width: 1400px;
   min-width: 300px;
   margin: auto;
   padding: 3em 1em 5em;

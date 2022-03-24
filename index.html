@@ -53,7 +53,7 @@
                 var id = event.target.getAttribute('href').substr(1);
                 // get the element with the corresponding id
                 var element = document.getElementById(id);
-                // scroll smoothly to the element minus the navbar height
+                // scroll smoothly to the element minus the navbar height minus 30px
                 window.scroll({
                     top: element.offsetTop - document.querySelector('.navbar').offsetHeight - 30,
                     behavior: 'smooth'
@@ -63,35 +63,18 @@
                 while (!parent.classList.contains('tile')) {
                     parent = parent.parentElement;
                 }
-                // increase box-shadow of the parent element
-                parent.style.boxShadow = '0 0 8px #000';
-                // remove the border after a short delay
+                // change tile background color to the one of the navbar
+                var initialShadow = window.getComputedStyle(parent).getPropertyValue('box-shadow');
+                var newShadow = initialShadow.split(' ');
+                newShadow[5] = '5px';
+                parent.style.boxShadow = newShadow.join(' ');
+                // remove the border 500ms after the scroll ends
                 setTimeout(function() {
-                    parent.style.boxShadow = '';
-                }, 800);
-            });
-        });
-        // color the navbar according to the current position of the page
-        window.addEventListener('scroll', function() {
-            var navbar = document.querySelector('.navbar');
-            var navbarHeight = navbar.offsetHeight;
-            var sections = document.querySelectorAll('section');
-            var currentSection = null;
-            sections.forEach(function(element) {
-                if (element.offsetTop - navbarHeight <= window.scrollY) {
-                    currentSection = element;
-                }
-            });
-            if (currentSection) {
-                navbar.querySelectorAll('a').forEach(function(element) {
-                    element.classList.remove('active');
-                    if (element.getAttribute('href').substr(1) === currentSection.id) {
-                        element.classList.add('active');
-                    }
-                });
-            }
-        });
+                    parent.style.boxShadow = initialShadow;
+                }, 700);
 
+            });
+        });
     </script>
 
     <!-- Resume -->
@@ -103,20 +86,46 @@
 
             <div class="resume-item">
                 <h2>Double diplôme ModIA, INSA – ENSEEIHT</h2>
-                <h3>2017 – 2023</h3>
+                <h3>2020 – 2023</h3>
                 <h4>Toulouse</h4>
                 <div class="resume-item-description">
                     <p>
-                        Apprenti en préparation du double diplôme <strong>ModIA
+                        Étudiant en préparation du double diplôme <strong>ModIA
                         (Modélisation & Intelligence Artificielle)</strong> des écoles
-                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>INP-ENSEEIHT</strong>
+                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>INP-ENSEEIHT</strong>.<br />
+                        Apprenti en bioinformatique à l'INRAe Toulouse (voir <a href="#inrae">plus bas</a>).
                     </p>
                     <ul>
-                        <li>Matière 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Matière 2: Nullam vel eros consectetur, eleifend justo quis, efficitur nulla.</li>
-                        <li>Matière 3: Vivamus ipsum est, pellentesque sed mi at, semper ullamcorper odio.</li>
-                        <li>Matière 4: Etiam enim enim, feugiat hendrerit placerat ut, porttitor non sem.</li>
+                        <li>Outils d'intelligence artificielle
+                            <ul>
+                                <li>Machine learning (régressions, SVM, forêts aléatoires...)</li>
+                                <li>Deep learning (réseaux de neurones, réseaux convolutionnels,
+                                    réseaux récurrents...)</li>
+                                <li>Apprentissage non-supervisé (méthodes de clustering)</li>
+                            </ul>
+                        </li>
+                        <li>Analyse de données, modélisation statistique, durées de vie</li>
+                        <li>Optimisation, optimisation stochastique</li>
+                        <li>Traitement du signal, ondelettes</li>
+                        <li>Théorie des graphes, programmation fonctionnelle</li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="resume-item">
+                <h2>Mathématiques appliquées, INSA Toulouse</h2>
+                <h3>2017 – 2020</h3>
+                <h4>Toulouse</h4>
+                <div class="resume-item-description">
+                    <p>
+                        Trois premières années à l'INSA Toulouse en pré-orientation
+                        MIC (Modélisation, Informatique et Communication).
+                    </p>
+                    <ul>
+                        <li>Calcul scientifique</li>
+                        <li>Traitement du signal</li>
+                        <li>Modélisation statistique</li>
+                        <li>Programmation (Python, Ada, R, C, C++)</li>
                     </ul>
                 </div>
             </div>
@@ -126,7 +135,33 @@
                 <h3>2019 – 2020</h3>
                 <h4>Leicester, Royaume-Uni</h4>
                 <div class="resume-item-description">
-                    <p>Pratique de l'anglais.</p>
+                    <p>Pratique de l'anglais au quotidien dans un contexte mathématique, informatique.</p>
+                    <ul>
+                        <li>
+                            <em>Scientific Computing</em>
+                            <ul>
+                                <li>Systèmes linéaires et non-linéaires</li>
+                                <li>Approximations numériques de dérivées et d'intégrales</li>
+                                <li>Équations différentielles ordinaires</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <em>Operational Research</em>
+                            <ul>
+                                <li>Optimisation linéaire avec ou sans contraintes</li>
+                                <li>Méthode du simplexe</li>
+                                <li>Théorie des jeux</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <em>Equations of Mathematical Physics</em>
+                            <ul>
+                                <li>Equations aux dérivées partielles</li>
+                                <li>Problèmes aux valeurs propres</li>
+                                <li>Problèmes aux limites</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -134,7 +169,9 @@
                 <h2>Brevet d’Aptitude aux Fonctions d’Animateur (BAFA)</h2>
                 <h3>2018</h3>
                 <div class="resume-item-description">
-                    <p>Brevet d’Aptitude aux Fonctions d’Animateur</p>
+                    <p>Diplôme permettant d'encadrer des enfants et adolescents en accueils collectifs de mineurs
+                    (centres de loisirs, colonies de vacances...). Réalisation des deux stages théoriques d'une semaine
+                    chacun et de deux semaines de stage pratique.</p>
                 </div>
             </div>
 

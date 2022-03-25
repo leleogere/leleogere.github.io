@@ -19,13 +19,19 @@
 |     COLORS      |
 \*---------------*/
 :root {
-  --main-color: #406646;
-  --secondary-color: rgba(176, 33, 33, 0.78);
-  --tertiary-color: #f4a259;
-  --quaternary-color: #f4e285;
+  --main-color: #1a5089;
+  --secondary-color: #946d11;
+  --navbar-color: #dadae8;
   --background-color: #eeeeee;
   --tile-color: #f4e285;
 }
+/*:root {*/
+/*  --main-color: #406646;*/
+/*  --secondary-color: rgba(176, 33, 33, 0.78);*/
+/*  --navbar-color: #e2e5d9;*/
+/*  --background-color: #eeeeee;*/
+/*  --tile-color: #f4e285;*/
+/*}*/
 
 
 /*----------------*\
@@ -142,7 +148,7 @@ header h2 {
 \*----------------*/
 .tile.navbar {
   padding: 0;
-  background: #e2e5d9;
+  background: var(--navbar-color);
   position: sticky;
   top: 0;
   z-index: 100;

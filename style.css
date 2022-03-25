@@ -19,11 +19,11 @@
 |     COLORS      |
 \*---------------*/
 :root {
-  --main-color: #1a5089;
-  --secondary-color: #946d11;
-  --navbar-color: #dadae8;
-  --background-color: #eeeeee;
-  --tile-color: #f4e285;
+  --main-color: #1c5c9d;
+  --secondary-color: #b98f07;
+  --navbar-color: #f0f1f4;
+  --background-color: #fff;
+  --tile-color: #fff;
 }
 /*:root {*/
 /*  --main-color: #406646;*/
@@ -77,16 +77,11 @@ body {
 |       TILE       |
 \*----------------*/
 .tile {
-  background: #eeeeee;
+  background: var(--tile-color);
   padding: 1em;
-  box-shadow: 0 0 3px #aaa;
+  box-shadow: 0 0 2px #aaa;
   margin: 1em 0;
   border-radius: 2px;
-  transition: box-shadow 0.1s ease-in-out;
-}
-
-.tile:hover {
-  box-shadow: 0 0 4px #aaa;
   transition: box-shadow 0.1s ease-in-out;
 }
 
@@ -166,7 +161,7 @@ nav a {
   padding: 1em .7em;
   flex-grow: 5;
   margin: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   text-align: center;
   text-transform: uppercase;
   transition: background 0.2s ease-in-out;
@@ -174,7 +169,7 @@ nav a {
 
 nav a:hover {
   color: var(--secondary-color);
-  background: #ddd;
+  background: #e9e9e9;
   transition: background 0.1s ease-in-out;
 }
 
@@ -196,12 +191,10 @@ p, li {
 a:link, a:visited {
   color: var(--main-color);
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--secondary-color);
-  transition: color 0.2s ease-in-out;
   cursor: pointer;
 }
 

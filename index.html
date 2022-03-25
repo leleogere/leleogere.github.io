@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Léo Géré</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
 
@@ -43,39 +45,6 @@
             <a href="#contact">Contact</a>
         </nav>
     </div>
-    <script>
-        // react when the user clicks on a button of the navbar
-        document.querySelectorAll('.navbar a').forEach(function(element) {
-            element.addEventListener('click', function(event) {
-                // prevent the default action of the event
-                event.preventDefault();
-                // get the id of the element that was clicked
-                var id = event.target.getAttribute('href').substr(1);
-                // get the element with the corresponding id
-                var element = document.getElementById(id);
-                // scroll smoothly to the element minus the navbar height minus 30px
-                window.scroll({
-                    top: element.offsetTop - document.querySelector('.navbar').offsetHeight - 30,
-                    behavior: 'smooth'
-                });
-                // find the first parent element that has the class tile
-                var parent = element.parentElement;
-                while (!parent.classList.contains('tile')) {
-                    parent = parent.parentElement;
-                }
-                // change tile background color to the one of the navbar
-                var initialShadow = window.getComputedStyle(parent).getPropertyValue('box-shadow');
-                var newShadow = initialShadow.split(' ');
-                newShadow[5] = '5px';
-                parent.style.boxShadow = newShadow.join(' ');
-                // remove the border 500ms after the scroll ends
-                setTimeout(function() {
-                    parent.style.boxShadow = initialShadow;
-                }, 700);
-
-            });
-        });
-    </script>
 
     <!-- Resume -->
     <div id="resume" class="resume">
@@ -92,10 +61,10 @@
                     <p>
                         Étudiant en préparation du double diplôme <strong>ModIA
                         (Modélisation & Intelligence Artificielle)</strong> des écoles
-                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>INP-ENSEEIHT</strong>.<br />
-                        Apprenti en bioinformatique à l'INRAe Toulouse (voir <a href="#inrae">plus bas</a>).
+                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>ENSEEIHT</strong>.<br />
+                        Apprenti en bioinformatique à l'INRAe Toulouse (voir <a href="#inrae">ici</a>).
                     </p>
-                    <ul>
+                    <ul class="see-more">
                         <li>Outils d'intelligence artificielle
                             <ul>
                                 <li>Machine learning (régressions, SVM, forêts aléatoires...)</li>
@@ -109,6 +78,7 @@
                         <li>Traitement du signal, ondelettes</li>
                         <li>Théorie des graphes, programmation fonctionnelle</li>
                     </ul>
+                    <button class="see-more-button">Voir plus</button>
                 </div>
             </div>
 
@@ -121,12 +91,13 @@
                         Trois premières années à l'INSA Toulouse en pré-orientation
                         MIC (Modélisation, Informatique et Communication).
                     </p>
-                    <ul>
+                    <ul class="see-more">
                         <li>Calcul scientifique</li>
                         <li>Traitement du signal</li>
                         <li>Modélisation statistique</li>
                         <li>Programmation (Python, Ada, R, C, C++)</li>
                     </ul>
+                    <button class="see-more-button">Voir plus</button>
                 </div>
             </div>
 
@@ -136,7 +107,7 @@
                 <h4>Leicester, Royaume-Uni</h4>
                 <div class="resume-item-description">
                     <p>Pratique de l'anglais au quotidien dans un contexte mathématique, informatique.</p>
-                    <ul>
+                    <ul class="see-more">
                         <li>
                             <em>Scientific Computing</em>
                             <ul>
@@ -162,6 +133,7 @@
                             </ul>
                         </li>
                     </ul>
+                    <button class="see-more-button">Voir plus</button>
                 </div>
             </div>
 
@@ -180,6 +152,10 @@
         <div class="tile">
 
             <h1 id="experience">Expériences professionnelles</h1>
+
+            <div class="resume-item">
+                <h2 id="inrae">Apprenti en bioinformatique, INRAe Toulouse</h2>
+            </div>
 
             <div class="resume-item">
                 <h2>Animation en centre de vacances</h2>

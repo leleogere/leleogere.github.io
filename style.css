@@ -196,6 +196,7 @@ a:link, a:visited {
 a:hover {
   color: var(--secondary-color);
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 /*------------*\
@@ -287,10 +288,37 @@ a:hover {
 /* Experience list */
 .resume-item ul {
   list-style: circle;
+  overflow: hidden;
 }
 
 .resume-item p+ul {
-  margin-top: -.8em;
+  transform: translateY(-.8em);
+  margin-bottom: 0;
+}
+
+/* See more section that appear when clicked */
+.resume-item .see-more {
+  display: none;
+}
+
+.resume-item-description .see-more-button {
+  display: block;
+  margin: -.5em 0 1em auto;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.resume-item-description .see-more-button:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.resume-item-description .see-more-button:focus {
+  outline: none;
 }
 
 

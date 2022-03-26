@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Make the "see-more" class appear when the user clicks on the button using jQuery
-    $(".see-more-button").click(function() {
+    $(".see-more-button").click(function () {
         $(this).parent().find(".see-more").slideToggle("ease-in-out");
         // Change the text of the button
         if ($(this).text() === "Voir plus") {
@@ -12,9 +12,9 @@ $(document).ready(function() {
     });
 
     // make all scrolls smooth and 30px above the real place
-    $('a[href^="#"]').on('click', function(event) {
+    $('a[href^="#"]').on('click', function (event) {
         var target = $(this.getAttribute('href'));
-        if( target.length ) {
+        if (target.length) {
             event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: target.offset().top - document.querySelector('.navbar').offsetHeight - 28
@@ -23,8 +23,8 @@ $(document).ready(function() {
     });
 
     // increase tile shadow when navbar button clicked
-    document.querySelectorAll('.navbar a').forEach(function(element) {
-        element.addEventListener('click', function(event) {
+    document.querySelectorAll('.navbar a').forEach(function (element) {
+        element.addEventListener('click', function (event) {
             // prevent the default action of the event
             event.preventDefault();
             // get the id of the element that was clicked
@@ -42,7 +42,7 @@ $(document).ready(function() {
             newShadow[5] = '5px';
             parent.style.boxShadow = newShadow.join(' ');
             // remove the border 500ms after the scroll ends
-            setTimeout(function() {
+            setTimeout(function () {
                 parent.style.boxShadow = initialShadow;
             }, 800);
 

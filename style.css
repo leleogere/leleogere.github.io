@@ -199,34 +199,28 @@ a:hover {
   cursor: pointer;
 }
 
+
+/*-----------------*\
+|   SIBLING TILES   |
+\*-----------------*/
+@media screen and (min-width: 1000px) {
+  .sibling-tiles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    column-gap: 1em;
+  }
+
+  .sibling-tiles .tile {
+    flex: 1 1 40%;
+    margin: 0;
+  }
+}
+
+
 /*------------*\
 |    RESUME    |
 \*------------*/
-.resume {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  column-gap: 1em;
-}
-
-.resume .tile {
-  flex: 1 1 40%;
-  margin: 0;
-}
-
-@media screen and (max-width: 1000px) {
-  .resume .tile {
-    flex: 1 1 100%;
-  }
-
-  .resume .tile:first-child {
-    margin-bottom: .5em;
-  }
-
-  .resume .tile:last-child {
-    margin-top: .5em;
-  }
-}
 
 /* Global left border */
 /* Line */
@@ -238,7 +232,7 @@ a:hover {
 }
 
 /* Bullets */
-.resume .resume-item::before {
+.resume-item::before {
   content: "";
   position: absolute;
   width: 6px;
@@ -251,7 +245,7 @@ a:hover {
 }
 
 /* Final bullet */
-.resume .resume-item:last-child::after {
+.resume-item:last-child::after {
   content: "";
   position: absolute;
   width: 6px;

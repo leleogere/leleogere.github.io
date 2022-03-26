@@ -25,6 +25,7 @@
   --background-color: #fff;
   --tile-color: #fff;
 }
+
 /*:root {*/
 /*  --main-color: #406646;*/
 /*  --secondary-color: rgba(176, 33, 33, 0.78);*/
@@ -214,9 +215,17 @@ a:hover {
 }
 
 @media screen and (max-width: 1000px) {
-  .resume .tile {flex: 1 1 100%;}
-  .resume .tile:first-child {margin-bottom: .5em;}
-  .resume .tile:last-child {margin-top: .5em;}
+  .resume .tile {
+    flex: 1 1 100%;
+  }
+
+  .resume .tile:first-child {
+    margin-bottom: .5em;
+  }
+
+  .resume .tile:last-child {
+    margin-top: .5em;
+  }
 }
 
 /* Global left border */
@@ -227,6 +236,7 @@ a:hover {
   position: relative;
   margin-left: 10px;
 }
+
 /* Bullets */
 .resume .resume-item::before {
   content: "";
@@ -239,6 +249,7 @@ a:hover {
   background: var(--background-color);
   border: 2px solid var(--main-color);
 }
+
 /* Final bullet */
 .resume .resume-item:last-child::after {
   content: "";
@@ -290,7 +301,7 @@ a:hover {
   overflow: hidden;
 }
 
-.resume-item p+ul {
+.resume-item p + ul {
   transform: translateY(-.8em);
   margin-bottom: 0;
 }

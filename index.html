@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
     <title>Léo Géré</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
@@ -17,9 +17,9 @@
     <header>
 
         <div class="tile">
-            <img class="photo" src="images/photo_mini.jpg" alt="Léo Géré" title="Léo Géré"/>
+            <img alt="Léo Géré" class="photo" src="images/photo_mini.jpg" title="Léo Géré"/>
             <p>23 ans</p>
-            <p>Permis B<br /><span class="detail">(non véhiculé)</span></p>
+            <p>Permis B<br/><span class="detail">(non véhiculé)</span></p>
             <p>Toulouse</p>
         </div>
 
@@ -32,6 +32,7 @@
                 concerne à l'intelligence artificielle. Pianiste depuis l'enfance, je m'intéresse particulièrement
                 aux problématiques liées au domaine de la musique, et aux nouveaux outils à destinations des
                 musiciens.
+            </p>
         </div>
 
     </header>
@@ -47,7 +48,7 @@
     </div>
 
     <!-- Resume -->
-    <div id="resume" class="resume">
+    <div class="resume" id="resume">
 
         <div class="tile">
 
@@ -61,7 +62,7 @@
                     <p>
                         Étudiant en préparation du double diplôme <strong>ModIA
                         (Modélisation & Intelligence Artificielle)</strong> des écoles
-                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>ENSEEIHT</strong>.<br />
+                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>ENSEEIHT</strong>.<br/>
                         Apprenti en bioinformatique à l'INRAe Toulouse (voir <a href="#inrae">ici</a>).
                     </p>
                     <ul class="see-more">
@@ -69,7 +70,8 @@
                             <ul>
                                 <li>Machine learning (régressions, SVM, forêts aléatoires...)</li>
                                 <li>Deep learning (réseaux de neurones, réseaux convolutionnels,
-                                    réseaux récurrents...)</li>
+                                    réseaux récurrents...)
+                                </li>
                                 <li>Apprentissage non-supervisé (méthodes de clustering)</li>
                             </ul>
                         </li>
@@ -143,8 +145,8 @@
                 <div class="resume-item-description">
                     <p>
                         Diplôme permettant d'encadrer des enfants et adolescents en accueils collectifs de mineurs
-                        (centres de loisirs, colonies de vacances...). Réalisation des deux stages théoriques d'une semaine
-                        chacun et de deux semaines de stage pratique.
+                        (centres de loisirs, colonies de vacances...). Réalisation des deux stages théoriques d'une
+                        semaine chacun et de deux semaines de stage pratique.
                     </p>
                 </div>
             </div>
@@ -185,7 +187,9 @@
                             <ul>
                                 <li>Manipulation de centaines de Go de données</li>
                                 <li>Utilisation d'un cluster d'ordinateurs</li>
-                                <li>Développement de pipelines avec <strong>SparkML</strong> pour les algorithmes d'apprentissage</li>
+                                <li>Développement de pipelines avec <strong>SparkML</strong> pour les algorithmes
+                                    d'apprentissage
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -201,6 +205,7 @@
                     <p>Animation en centre de vacances auprès d’enfants de 7 à 14 ans pendant l'été.</p>
                 </div>
             </div>
+
             <div class="resume-item">
                 <h2>Cours particuliers de mathématiques</h2>
                 <h3>2018 – 2019</h3>
@@ -208,6 +213,7 @@
                     <p>Cours particulier de mathématiques à une élève de Première Scientifique.</p>
                 </div>
             </div>
+
             <div class="resume-item">
                 <h2>Participation à un projet humanitaire dans un orphelinat</h2>
                 <h3>2018</h3>
@@ -220,6 +226,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="resume-item">
                 <h2>Stage ouvrier, Nutrition & Santé</h2>
                 <h3>2018</h3>
@@ -232,6 +239,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="resume-item">
                 <h2>Participation à un projet humanitaire dans des orphelinats</h2>
                 <h3>2016</h3>
@@ -243,6 +251,7 @@
                     </p>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -255,13 +264,13 @@
             <div class="tool-item">
                 <h2>Expérimenté</h2>
                 <div class="logo-list">
-                    <a href="https://www.python.org/"><img src="images/icons/python.svg" alt="Python logo"
-                                                           height="30px" title="Python"></a>
-                    <a href="https://www.scala-lang.org/"><img src="images/icons/scala.svg" alt="Scala logo"
-                                                               height="30px" title="Scala"></a>
-                    <a href="https://spark.apache.org/"><img src="images/icons/spark.svg" alt="Spark logo"
-                                                             height="30px" title="Apache Spark"></a>
-                    <a href="https://www.r-project.org/"><img src="images/icons/r.svg" alt="R logo" height="30px"
+                    <a href="https://www.python.org/"><img alt="Python logo" height="30px"
+                                                           src="images/icons/python.svg" title="Python"></a>
+                    <a href="https://www.scala-lang.org/"><img alt="Scala logo" height="30px"
+                                                               src="images/icons/scala.svg" title="Scala"></a>
+                    <a href="https://spark.apache.org/"><img alt="Spark logo" height="30px"
+                                                             src="images/icons/spark.svg" title="Apache Spark"></a>
+                    <a href="https://www.r-project.org/"><img alt="R logo" height="30px" src="images/icons/r.svg"
                                                               title="R"></a>
                 </div>
             </div>
@@ -269,13 +278,13 @@
             <div class="tool-item">
                 <h2>Intermédiaire</h2>
                 <div class="logo-list">
-                    <a href="https://www.linux.org/"><img src="images/icons/linux.svg" alt="Linux logo"
-                                                          height="30px" title="Linux"></a>
-                    <a href="https://git-scm.com/"><img src="images/icons/git.svg" alt="Git logo" height="30px"
+                    <a href="https://www.linux.org/"><img alt="Linux logo" height="30px"
+                                                          src="images/icons/linux.svg" title="Linux"></a>
+                    <a href="https://git-scm.com/"><img alt="Git logo" height="30px" src="images/icons/git.svg"
                                                         title="Git"></a>
-                    <a href="https://www.w3.org/html/"><img src="images/icons/html.svg" alt="HTML logo" height="30px"
+                    <a href="https://www.w3.org/html/"><img alt="HTML logo" height="30px" src="images/icons/html.svg"
                                                             title="HTML"></a>
-                    <a href="https://www.w3.org/Style/CSS/"><img src="images/icons/css.svg" alt="CSS logo" height="30px"
+                    <a href="https://www.w3.org/Style/CSS/"><img alt="CSS logo" height="30px" src="images/icons/css.svg"
                                                                  title="CSS"></a>
                 </div>
             </div>
@@ -283,16 +292,17 @@
             <div class="tool-item">
                 <h2>Débutant</h2>
                 <div class="logo-list">
-                    <a href="https://www.iso.org/standard/74528.html"><img src="images/icons/c.svg" alt="C logo"
-                                                                           height="30px" title="C"></a>
-                    <a href="https://isocpp.org/"><img src="images/icons/cpp.svg" alt="C++ logo" height="30px"
+                    <a href="https://www.iso.org/standard/74528.html"><img alt="C logo" height="30px"
+                                                                           src="images/icons/c.svg" title="C"></a>
+                    <a href="https://isocpp.org/"><img alt="C++ logo" height="30px" src="images/icons/cpp.svg"
                                                        title="C++"></a>
-                    <a href="https://fr.mathworks.com/products/matlab.html"><img src="images/icons/matlab.png"
-                                                                                 alt="Matlab logo" height="30px"
+                    <a href="https://fr.mathworks.com/products/matlab.html"><img alt="Matlab logo"
+                                                                                 height="30px"
+                                                                                 src="images/icons/matlab.png"
                                                                                  title="Matlab"></a>
-                    <a href="https://www.java.com"><img src="images/icons/java.svg" alt="Java logo" height="30px"
+                    <a href="https://www.java.com"><img alt="Java logo" height="30px" src="images/icons/java.svg"
                                                         title="Java"></a>
-                    <a href="https://ocaml.org/"><img src="images/icons/ocaml.svg" alt="OCaml logo" height="30px"
+                    <a href="https://ocaml.org/"><img alt="OCaml logo" height="30px" src="images/icons/ocaml.svg"
                                                       title="OCaml"></a>
                 </div>
             </div>
@@ -306,19 +316,19 @@
         <div class="columns">
 
             <div class="language-item">
-                <img width=50px src="images/icons/fr_flag.svg" alt="French flag">
+                <img alt="French flag" src="images/icons/fr_flag.svg" width=50px>
                 <h2>Français</h2>
                 <p class="level">Natif</p>
             </div>
 
             <div class="language-item">
-                <img width=50px src="images/icons/gb_flag.svg" alt="UK flag">
+                <img alt="UK flag" src="images/icons/gb_flag.svg" width=50px>
                 <h2>Anglais</h2>
                 <p class="level">Niveau C1</p>
             </div>
 
             <div class="language-item">
-                <img width=50px src="images/icons/es_flag.svg" alt="Spanish flag">
+                <img alt="Spanish flag" src="images/icons/es_flag.svg" width=50px>
                 <h2>Espagnol</h2>
                 <p class="level">Niveau B2</p>
             </div>
@@ -332,17 +342,17 @@
             <div class="contacts">
                 <div class="contact-item">
                     <a href="mailto:leleogere@gmail.com">
-                        <img src="images/icons/mail.svg" alt="Email icon" height="20px">leleogere@gmail.com
+                        <img alt="Email icon" height="20px" src="images/icons/mail.svg">leleogere@gmail.com
                     </a>
                 </div>
                 <div class="contact-item">
                     <a href="https://www.linkedin.com/in/leo-gere" target="_blank">
-                        <img src="images/icons/linkedin.svg" alt="LinkedIn icon" height="20px">leo-gere
+                        <img alt="LinkedIn icon" height="20px" src="images/icons/linkedin.svg">leo-gere
                     </a>
                 </div>
                 <div class="contact-item">
                     <a href="https://github.com/leleogere" target="_blank">
-                        <img src="images/icons/github.svg" alt="Github icon" height="20px">github.com/leleogere
+                        <img alt="Github icon" height="20px" src="images/icons/github.svg">github.com/leleogere
                     </a>
                 </div>
             </div>

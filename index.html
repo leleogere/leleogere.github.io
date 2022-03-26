@@ -6,6 +6,7 @@
     <title>Léo Géré</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
+    <base target="_blank"/>
 </head>
 <body>
 
@@ -18,17 +19,11 @@
 
         <div class="tile">
             <img alt="Léo Géré" class="photo" src="images/photo_mini.jpg" title="Léo Géré"/>
-            <p>23 ans</p>
-            <p>Permis B<br/><span class="detail">(non véhiculé)</span></p>
-            <p>Toulouse</p>
-        </div>
-
-        <div class="tile">
             <h1 id="top">Léo Géré</h1>
             <h2 lang="fr">Data scientist</h2>
             <h2 lang="en">Title</h2>
             <p> Je suis actuellement étudiant en dernière année du double diplôme ModIA entre l'INSA Toulouse
-                et l'ENSEEHIT. Je suis passionné de sciences et nouvelles technologies, notamment tout ce qui
+                et l'ENSEEIHT. Je suis passionné de sciences et nouvelles technologies, notamment tout ce qui
                 concerne à l'intelligence artificielle. Pianiste depuis l'enfance, je m'intéresse particulièrement
                 aux problématiques liées au domaine de la musique, et aux nouveaux outils à destinations des
                 musiciens.
@@ -41,8 +36,9 @@
         <nav>
             <a href="#formation">Formation</a>
             <a href="#experience">Expériences pro</a>
-            <a href="#languages">Langues</a>
             <a href="#tools">Outils</a>
+            <a href="#languages">Langues</a>
+            <a href="#hobbies">Centres d'intérêt</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -60,10 +56,12 @@
                 <h4>Toulouse, France</h4>
                 <div class="resume-item-description">
                     <p>
-                        Étudiant en préparation du double diplôme <strong>ModIA
-                        (Modélisation & Intelligence Artificielle)</strong> des écoles
-                        d’ingénieur <strong>INSA Toulouse</strong> et <strong>ENSEEIHT</strong>.<br/>
-                        Apprenti en bioinformatique à l'INRAe Toulouse (voir <a href="#inrae">ici</a>).
+                        Étudiant en préparation du double diplôme
+                        <a href="https://www.enseeiht.fr/fr/formation/formation-ingenieur/departement-sn/programme-sn/parcours-modia.html">
+                            <strong>ModIA (Modélisation & Intelligence Artificielle)</strong></a>
+                        des écoles d’ingénieur <em>INSA Toulouse</em> et <em>ENSEEIHT</em>.
+                        <br/>Apprenti en bioinformatique à l'<em>INRAe Toulouse</em>
+                        (voir <a href="#inrae">section suivante</a>).
                     </p>
                     <ul class="see-more">
                         <li>Outils d'intelligence artificielle
@@ -90,7 +88,7 @@
                 <h4>Toulouse, France</h4>
                 <div class="resume-item-description">
                     <p>
-                        Trois premières années à l'INSA Toulouse en pré-orientation
+                        Trois premières années à l'<em>INSA Toulouse</em> en pré-orientation
                         MIC (Modélisation, Informatique et Communication).
                     </p>
                     <ul class="see-more">
@@ -174,8 +172,8 @@
                 <h4>Toulouse, France</h4>
                 <div class="resume-item-description">
                     <p>
-                        Apprenti à l’<strong>INRAe de Toulouse</strong> dans l'équipe de
-                        <strong>bioinformatique</strong> : étude de l’influence de gènes
+                        Apprenti à l’<em>INRAe de Toulouse</em> dans l'équipe de
+                        <em>bioinformatique</em> : étude de l’influence de gènes
                         sur un phénotype donné du tournesol en utilisant des méthodes
                         d'apprentissage et des outils big data.
                     </p>
@@ -310,30 +308,100 @@
         </div>
     </div>
 
-    <div class="tile">
-        <h1 id="languages">Langues</h1>
+    <div class="sibling-tiles">
 
-        <div class="columns">
+        <div class="tile languages">
 
-            <div class="language-item">
-                <img alt="French flag" src="images/icons/fr_flag.svg" width=50px>
-                <h2>Français</h2>
-                <p class="level">Natif</p>
+            <h1 id="languages">Langues</h1>
+
+            <div class="columns">
+
+                <div class="language-item">
+                    <img alt="French flag" src="images/icons/fr_flag.svg" width=50px>
+                    <h2>Français</h2>
+                    <p class="level">Natif</p>
+                </div>
+
+                <div class="language-item">
+                    <img alt="UK flag" src="images/icons/gb_flag.svg" width=50px>
+                    <h2>Anglais</h2>
+                    <p class="level">Niveau C1<br/><span class="certificate">(Cambridge Linguaskill)</span></p>
+                </div>
+
+                <div class="language-item">
+                    <img alt="Spanish flag" src="images/icons/es_flag.svg" width=50px>
+                    <h2>Espagnol</h2>
+                    <p class="level">Niveau B2</p>
+                </div>
+
             </div>
+        </div>
 
-            <div class="language-item">
-                <img alt="UK flag" src="images/icons/gb_flag.svg" width=50px>
-                <h2>Anglais</h2>
-                <p class="level">Niveau C1</p>
-            </div>
+        <div class="tile hobbies">
 
-            <div class="language-item">
-                <img alt="Spanish flag" src="images/icons/es_flag.svg" width=50px>
-                <h2>Espagnol</h2>
-                <p class="level">Niveau B2</p>
+            <h1 id="hobbies">Centres d'intérêts</h1>
+
+            <div class="small-tiles">
+
+                <div class="small-tile">
+                    <img alt="Sciences" src="images/technology.jpg" width=80px>
+                    <h2>Sciences et technologies</h2>
+                    <div class="small-tile-description">
+                        <p>Grand consommateur de <strong>vulgarisation scientifique</strong></p>
+                        <p>Intérêt particulier par tout ce qui touche à la <strong>visualisation</strong> des
+                            mathématiques (contribution au projet open source
+                            <a href="https://www.manim.community/">Manim</a>).</p>
+                        </p>
+                        <p>Suivi des nouvelles technologies, notamment ce qui concerne l'intelligence
+                            artificielle
+                        </p>
+                    </div>
+                </div>
+
+                <div class="small-tile">
+                    <img width=100px src="images/piano.jpg" alt="Piano">
+                    <h2>Musique</h2>
+                    <div class="small-tile-description">
+                        <p>Pratique du <strong>piano</strong> (15 ans)</p>
+                        <p>Pratique du <strong>violon</strong> (2 ans)</p>
+                        <p><strong>Composition</strong> des bandes originales de trois courts
+                            métrages en 2017, 2029 et 2021
+                        </p>
+                        <p>Vif intérêt dans les <strong>outils innovant</strong>
+                            pour les musiciens (informatique, IA...)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="small-tile">
+                    <img alt="Danse" src="images/danse.jpg" width=80px>
+                    <h2>Danse sociale</h2>
+                    <div class="small-tile-description">
+                        <p>Pratique de plusieurs <strong>danses de salon</strong> (rock, boogie, lindy hop, salsa)
+                            pendant plusieurs années.
+                        </p>
+                        <p><strong>Président</strong> du Club Rock de l'INSA Toulouse durant l'année 2018-2019</p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="small-tile">
+                    <img alt="Cirque" src="images/circus.jpg" width=80px>
+                    <h2>Arts du cirque</h2>
+                    <div class="small-tile-description">
+                        <p>Pratique des <strong>arts du cirque</strong> et membre d'une
+                            <strong>troupe amateur</strong> pendant 10 ans
+                        </p>
+                        <p>Nombreuses <strong>représentations</strong> dans des festival pour enfants</p>
+                        <p><strong>Animation</strong> de colonies de vacances et d'ateliers autour du cirque</p>
+                        <p></p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
+
     </div>
 
     <footer>

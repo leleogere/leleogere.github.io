@@ -39,7 +39,7 @@ $(document).ready(function () {
             // change tile background color to the one of the navbar
             var initialShadow = window.getComputedStyle(parent).getPropertyValue('box-shadow');
             var newShadow = initialShadow.split(' ');
-            newShadow[5] = '5px';
+            newShadow[5] = '4px';
             parent.style.boxShadow = newShadow.join(' ');
             // remove the border 500ms after the scroll ends
             setTimeout(function () {

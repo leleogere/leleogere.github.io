@@ -453,6 +453,7 @@ em {
 }
 
 .small-tile-description p {
+  margin: 0;
   text-align: center;
   z-index: 2;
 }

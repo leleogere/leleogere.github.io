@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+    // Select language
+    var language = "fr";
+    // load json language file in the folder called "lang"
+    $.getJSON("./lang/" + language + ".json", function (data) {
+        // replace text of all elements with the attribute "data-lang" with the corresponding value in the json file
+        $("[data-lang]").each(function () {
+            $(this).text(data[$(this).attr("data-lang")]);
+        });
+    });
+
     // Make the "see-more" class appear when the user clicks on the button using jQuery
     $(".see-more-button").click(function () {
         $(this).parent().find(".see-more").slideToggle("ease-in-out");

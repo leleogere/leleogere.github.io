@@ -409,6 +409,7 @@ em {
   text-align: center;
   margin-top: 0;
   z-index: -1;
+  padding-top: .1em;
   padding-bottom: 2em;
   margin-bottom: -2em;
 }
@@ -434,9 +435,14 @@ em {
 }
 
 .small-tile .small-tile-description {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  row-gap: 1em;
+  height: 83%;
   opacity: 0;
   transition: opacity .5s;
-  margin: auto .5em;
+  margin: .1em .6em 2em;
   z-index: 5;
 }
 

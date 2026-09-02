@@ -34,6 +34,11 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    color: var(--text);
+    display: inline-block;
+}
+
 /* --- LAYOUT --- */
 .page {
     /*width: 95%; !* Fluid width for mobile *!*/
@@ -56,6 +61,7 @@ header {
     color: var(--graytext);
     line-height: 1.1;
 }
+
 .name span {
     color: var(--text);
 }
@@ -103,8 +109,11 @@ header {
     color: var(--darkgray);
     font-weight: 500;
 }
+
 /* --- SECTIONS --- */
-.cv-section { margin-top: 1.5rem; }
+.cv-section {
+    margin-top: 1.5rem;
+}
 
 .section-header {
     display: flex;
@@ -123,7 +132,9 @@ header {
     white-space: nowrap;
 }
 
-.section-header h2 span { color: var(--accent); }
+.section-header h2 span {
+    color: var(--accent);
+}
 
 .section-header .line {
     flex-grow: 1;
@@ -199,12 +210,15 @@ ul {
     font-weight: 300;
     color: var(--text);
 }
-li { margin-bottom: 0.25rem; }
+
+li {
+    margin-bottom: 0.25rem;
+}
 
 /* --- SKILLS --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 9rem 1fr;
     gap: 0.5rem 1rem;
 }
 
@@ -298,6 +312,7 @@ li { margin-bottom: 0.25rem; }
         padding: 0;
         margin: 0;
     }
+
     body {
         background: white;
     }
